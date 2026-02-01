@@ -3,7 +3,7 @@ import datetime
 
 root = tk.Tk()
 root.title("Parking System")
-root.geometry("19208x1080")
+root.state('zoomed')
 
 label = tk.Label(root, text="Parking system")
 label.grid(pady=30, padx=30)
@@ -58,7 +58,7 @@ def check_out(b, slot_name):
 
     def clicked_pay():
         del parking_data[slot_name]
-        b.config(text=slot_name, bg="SystemButtonFace", fg="black")
+        b.config(text=slot_name, bg="#00ff00", fg="black") 
         new_window.destroy()
 
     btn_pay = tk.Button(new_window, text="Pay & Exit", bg="red", fg="white", font=("Arial", 14), command=clicked_pay)
